@@ -16,12 +16,26 @@ public class Coin implements Serializable {
     private String symbol;
     private String name;
     private String image;
-    private String current_price;
-    private String market_cap;
-    private String market_cap_rank;
-    private String fully_diluted_valuation;
-    private String total_volume;
-    private String high_24h;
-    private String low_24h;
-
+    private int current_price;
+    private Long market_cap;
+    private Long market_cap_rank;
+    private Long fully_diluted_valuation;
+    private Long total_volume;
+    private int high_24h;
+    private int low_24h;
+    private int price_change_24h;
+    private int price_change_percentage_24h;
+    private Long market_cap_change_24h;
+    private Long market_cap_change_percentage_24h;
+    private int circulating_supply;
+    private int total_supply;
+    private int max_supply;
+    private int ath;
+    private int ath_change_percentage;
+    private String ath_date;
+    private int atl;
+    private Long atl_change_percentage;
+    private String atl_date;
+    private ROI roi;
+    private String last_updated;
 }

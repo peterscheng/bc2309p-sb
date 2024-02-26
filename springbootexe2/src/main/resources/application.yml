@@ -1,4 +1,14 @@
 
+api:
+  jsonplaceholder:
+    domain: "api.coingecko.com"
+    key: "CG-e3UPwLBrbex3k2tUyouwLJiM"
+    endpoints:
+      coin: "/api/v3/coins/markets"
+
+
+
+
 ##part 1
 ##https://www.coingecko.com/en/developers/dashboard
 #peter_demo	CG-e3UPwLBrbex3k2tUyouwLJiM
@@ -8,3 +18,10 @@
 #/coins/markets
 
 #part 3
+
+#part 4
+
+##http://localhost:8080/crypto/coingecko/api/v1/coins?currency=usd&ids=bitcoin,ethereum
+server:
+  servlet:
+    context-path: /crypto/coingecko
