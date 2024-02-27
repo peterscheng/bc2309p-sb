@@ -53,7 +53,7 @@ public class CoinServiceHolder implements CoinService {
                 redisService.saveCoins(rediskey, Arrays.stream(coins).collect(Collectors.toList()),duration);
             } catch (JsonProcessingException e) {
                 //no need to handle
-                e.printStackTrace();
+               // e.printStackTrace();
             }
 
         }
