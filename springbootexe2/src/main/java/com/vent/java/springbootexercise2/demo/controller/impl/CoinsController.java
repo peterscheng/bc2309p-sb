@@ -3,6 +3,7 @@ package com.vent.java.springbootexercise2.demo.controller.impl;
 import com.vent.java.springbootexercise2.demo.controller.CoinsOperation;
 import com.vent.java.springbootexercise2.demo.dto.mapper.CoinMapper;
 import com.vent.java.springbootexercise2.demo.dto.reponse.CoinDTO;
+import com.vent.java.springbootexercise2.demo.dto.request.CurrencyDTO;
 import com.vent.java.springbootexercise2.demo.entity.Coin;
 import com.vent.java.springbootexercise2.demo.infra.ApiResponse;
 import com.vent.java.springbootexercise2.demo.infra.Syscode;
@@ -22,8 +23,8 @@ public class CoinsController implements CoinsOperation {
     private CoinService coinService;
 
     @Override
-    public ApiResponse<List<CoinDTO>> getCoins(String currency, String ids) {
-        List<Coin> coins = coinService.getCoins(currency, ids);
+    public ApiResponse<List<CoinDTO>> getCoins(CurrencyDTO currency, String ids) {
+        List<Coin> coins = coinService.getCoins(currency.getCurrency(), ids);
         List<CoinDTO> dtos = CoinMapper.map(coins);
         return ApiResponse.<List<CoinDTO>>builder()
                 .status(Syscode.OK)

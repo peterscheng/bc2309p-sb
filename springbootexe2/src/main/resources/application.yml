@@ -3,10 +3,16 @@ api:
   jsonplaceholder:
     domain: "api.coingecko.com"
     key: "CG-e3UPwLBrbex3k2tUyouwLJiM"
+    rediskey: "crytpo:coingecko:coins-markets"
     endpoints:
       coin: "/api/v3/coins/markets"
 
-
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+    database: 0
 
 
 ##part 1
@@ -25,3 +31,5 @@ api:
 server:
   servlet:
     context-path: /crypto/coingecko
+
+

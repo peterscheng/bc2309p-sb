@@ -11,7 +11,7 @@
     <groupId>com.vent.java.springbootexercise2</groupId>
     <artifactId>springbootexercise2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
+    <name>springbootexercise2</name>
     <description>Spring Boot exe2</description>
     <properties>
         <java.version>8</java.version>
@@ -31,6 +31,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
     </dependencies>
 

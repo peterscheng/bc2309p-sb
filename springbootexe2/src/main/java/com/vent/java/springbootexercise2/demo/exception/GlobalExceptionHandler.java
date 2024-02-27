@@ -14,7 +14,7 @@ import org.springframework.web.client.RestClientException;
 public class GlobalExceptionHandler {
 
   @ExceptionHandler(RestClientException.class)
-  @ResponseStatus(value = HttpStatus.BAD_REQUEST)  // http status code
+  @ResponseStatus(value = HttpStatus.SERVICE_UNAVAILABLE)
   public ApiResponse<Void> restclientExceptionHandler() {
     return ApiResponse.<Void>builder() //
         .status(Syscode.REST_CLIENT_EXCEPTION) //
